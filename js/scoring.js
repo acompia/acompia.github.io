@@ -82,6 +82,7 @@ function computeScoring(answers) {
   if (answers['Q1bis.3'] === 'oui') quotidien.verdicts.push({ level: 'REDUIT', text: 'Prise en charge transport conforme sur la base de vos réponses.' });
   else if (answers['Q1bis.3'] === 'pas-homogene') quotidien.verdicts.push({ level: 'MOYEN', text: 'Une prise en charge non homogène peut créer des écarts de traitement et des risques de redressement.' });
   else if (answers['Q1bis.3'] === 'non') quotidien.verdicts.push({ level: 'SIGNAL', text: 'La prise en charge des abonnements de transport public est en principe obligatoire. Vérification recommandée.' });
+  else if (answers['Q1bis.3'] === 'nsp') quotidien.verdicts.push({ level: 'MOYEN', text: 'Vérification recommandée sur la prise en charge des abonnements de transport public.' });
 
   if (answers['Q1bis.4'] === 'oui-sans-verif') quotidien.verdicts.push({ level: 'MOYEN', text: 'L\'allocation télétravail versée sans vérification présente un risque en cas de contrôle.' });
   else if (answers['Q1bis.4'] === 'nsp') quotidien.verdicts.push({ level: 'MOYEN', text: 'Vérification recommandée sur le traitement social de l\'allocation télétravail.' });
@@ -92,7 +93,9 @@ function computeScoring(answers) {
   // === BLOC 2 — Mutuelle et prévoyance ===
   const psc = { name: 'Protection sociale complémentaire', icon: '🏥', verdicts: [], level: 'NA' };
 
-  if (['aucune', 'nsp'].includes(answers['Q2.1a'])) {
+  if (['accord', 'referendum'].includes(answers['Q2.1a'])) {
+    psc.verdicts.push({ level: 'REDUIT', text: 'Complémentaire santé formalisée par accord collectif ou référendum — bonne pratique.' });
+  } else if (['aucune', 'nsp'].includes(answers['Q2.1a'])) {
     psc.verdicts.push({ level: 'CRITIQUE', text: 'L\'absence de formalisation de la complémentaire santé expose à la perte totale du régime social de faveur.' });
   } else if (answers['Q2.1a'] === 'due') {
     if (answers['Q2.1b'] === 'oui-tous') psc.verdicts.push({ level: 'REDUIT', text: 'DUE mutuelle formalisée et preuve de remise disponible.' });
@@ -156,6 +159,9 @@ function computeScoring(answers) {
   if (answers['Q4.1'] === 'aucun') {
     rgdu.verdicts.push({ level: 'NA', text: 'Non concerné par la réduction générale.' });
   } else {
+    if (['oui-sys'].includes(answers['Q4.2']) && ['non'].includes(answers['Q4.3'])) {
+      rgdu.verdicts.push({ level: 'REDUIT', text: 'Bonne pratique : le calcul RGDU fait l\'objet d\'un contrôle humain et les situations complexes sont rares.' });
+    }
     if (['non', 'nsp'].includes(answers['Q4.2'])) rgdu.verdicts.push({ level: 'ELEVE', text: 'L\'absence de contrôle humain du calcul RGDU expose à des erreurs non détectées par le logiciel.' });
     if (['oui-freq'].includes(answers['Q4.3'])) rgdu.verdicts.push({ level: 'ELEVE', text: 'Les situations complexes fréquentes augmentent significativement le risque d\'erreur sur la RGDU.' });
     else if (answers['Q4.3'] === 'oui-ponctuel') rgdu.verdicts.push({ level: 'MOYEN', text: 'Des situations ponctuellement complexes nécessitent une vigilance sur le calcul RGDU.' });

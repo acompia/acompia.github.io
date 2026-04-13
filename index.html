@@ -16,12 +16,27 @@
   <!-- ==================== NAV ==================== -->
   <nav id="nav">
     <div class="nav-logo">
+      <svg class="nav-logo-icon" width="36" height="30" viewBox="0 0 56 48" fill="none">
+        <path d="M14 2C6 2,2 10,2 24C2 38,6 46,14 46" stroke="rgba(67,56,202,0.2)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+        <line x1="16" y1="10" x2="23" y2="10" stroke="rgba(67,56,202,0.2)" stroke-width="1" stroke-linecap="round"/>
+        <line x1="19" y1="16" x2="25" y2="16" stroke="rgba(67,56,202,0.15)" stroke-width="1" stroke-linecap="round"/>
+        <line x1="14" y1="22" x2="21" y2="22" stroke="rgba(67,56,202,0.25)" stroke-width="1" stroke-linecap="round"/>
+        <line x1="18" y1="28" x2="24" y2="28" stroke="rgba(67,56,202,0.12)" stroke-width="1" stroke-linecap="round"/>
+        <line x1="15" y1="34" x2="22" y2="34" stroke="rgba(67,56,202,0.18)" stroke-width="1" stroke-linecap="round"/>
+        <circle cx="28" cy="24" r="2.5" fill="#4338CA"/>
+        <line x1="32" y1="10" x2="40" y2="10" stroke="#4338CA" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
+        <line x1="32" y1="16" x2="40" y2="16" stroke="#4338CA" stroke-width="0.9" stroke-linecap="round" opacity="0.65"/>
+        <line x1="32" y1="22" x2="40" y2="22" stroke="#4338CA" stroke-width="1.1" stroke-linecap="round"/>
+        <line x1="32" y1="28" x2="40" y2="28" stroke="#4338CA" stroke-width="0.9" stroke-linecap="round" opacity="0.65"/>
+        <line x1="32" y1="34" x2="40" y2="34" stroke="#4338CA" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
+        <path d="M42 2C50 2,54 10,54 24C54 38,50 46,42 46" stroke="#4338CA" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
       <span class="nav-logo-text">ACOMPIA</span>
     </div>
     <div class="nav-links">
-      <a href="#about">La solution</a>
       <a href="#prediag">Prédiagnostic</a>
       <a href="#audits">Nos audits</a>
+      <a href="#platform">La solution</a>
       <a href="#team">Équipe</a>
       <a href="#contact" class="nav-cta">Prendre RDV</a>
     </div>
@@ -42,13 +57,16 @@
 
       <p class="hero-subtitle">
         Chaque année, <strong>l'URSSAF redresse des milliers d'entreprises</strong>.
-        La vôtre est-elle prête&nbsp;? Évaluez votre exposition en 5&nbsp;minutes
-        avec notre prédiagnostic gratuit.
+        La vôtre est-elle prête&nbsp;?
+      </p>
+      <p class="hero-subtitle hero-subtitle-solution">
+        ACOMPIA combine intelligence artificielle et expertise juridique
+        pour automatiser votre conformité et vous garantir la sérénité
+        face aux contrôles.
       </p>
 
       <div class="hero-ctas">
         <a href="#prediag" class="btn-primary">Lancer mon prédiag gratuit &rarr;</a>
-        <a href="#audits" class="btn-secondary">Découvrir nos audits</a>
       </div>
 
       <div class="trust-strip">
@@ -61,8 +79,8 @@
           <div class="trust-text">Solution incubée au Barreau de Paris</div>
         </div>
         <div class="trust-item">
-          <div class="trust-icon">&#128187;</div>
-          <div class="trust-text">Équipe de juristes &amp; développeurs dédiés</div>
+          <div class="trust-icon">&#129302;</div>
+          <div class="trust-text">IA &amp; expertise juridique combinées</div>
         </div>
         <div class="trust-item">
           <div class="trust-icon">&#128274;</div>
@@ -91,57 +109,37 @@
         <div class="stat-label">de prescription<br>vérifiés lors d'un contrôle</div>
       </div>
       <div class="stat-card reveal">
-        <div class="stat-number" data-target="5">0</div>
-        <div class="stat-suffix">min</div>
-        <div class="stat-label">pour évaluer<br>votre exposition</div>
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-suffix">+</div>
+        <div class="stat-label">entreprises ont déjà<br>évalué leur exposition</div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== ABOUT / LA SOLUTION ==================== -->
-  <section id="about" class="about">
-    <div class="about-inner reveal">
-      <div class="section-tag">La solution ACOMPIA</div>
-      <h2>Intelligence artificielle &amp; expertise juridique<br>au service de votre <span class="gradient-text">conformité</span></h2>
-      <p class="about-lead">
-        ACOMPIA combine la puissance de l'IA avec l'expertise de juristes spécialisés
-        pour transformer la complexité réglementaire URSSAF en décisions claires et actionnables.
-        Chaque analyse est vérifiable, chaque résultat est tracé.
-      </p>
-      <div class="about-points">
-        <div class="about-point">
-          <div class="about-point-icon">&#129302;</div>
-          <div>
-            <h3>IA spécialisée &amp; validée par des experts</h3>
-            <p>Notre moteur d'intelligence artificielle analyse en continu les évolutions réglementaires (BOSS, Légifrance, jurisprudence), extrait automatiquement les règles applicables et les applique à vos données. Chaque résultat est validé par nos juristes&nbsp;: <strong>l'IA accélère, l'expert garantit</strong>.</p>
-          </div>
-        </div>
-        <div class="about-point">
-          <div class="about-point-icon">&#9878;&#65039;</div>
-          <div>
-            <h3>Fondée par une avocate spécialisée, incubée au Barreau de Paris</h3>
-            <p>10+ ans de pratique en droit social et contentieux URSSAF. Sabrina Henocque Chiche connaît les points de contrôle de l'intérieur. Solution sélectionnée par l'incubateur du Barreau de Paris (IBC 2025).</p>
-          </div>
-        </div>
-        <div class="about-point">
-          <div class="about-point-icon">&#128268;</div>
-          <div>
-            <h3>Plugée à vos données en continu</h3>
-            <p>ACOMPIA se connecte à vos données de paie, DSN et documents RH en permanence. Le moteur de règles analyse chaque salarié, chaque véhicule, chaque prime — et constitue votre dossier de preuve automatiquement. En cas de contrôle&nbsp;: <strong>tout est prêt, exportable en un clic</strong>.</p>
-          </div>
-        </div>
-        <div class="about-point">
-          <div class="about-point-icon">&#128172;</div>
-          <div>
-            <h3>Chatbot conformité URSSAF intégré</h3>
-            <p>Des questions sur vos pratiques&nbsp;? Notre assistant IA répond à vos interrogations de conformité URSSAF en temps réel, avec des réponses sourcées et vérifiables basées sur les textes en vigueur.</p>
-          </div>
+  <!-- ==================== PRÉDIAG (remonté en position 3) ==================== -->
+  <section id="prediag" class="prediag">
+    <div class="section-header reveal">
+      <div class="section-tag">Prédiagnostic URSSAF gratuit</div>
+      <h2>Évaluez votre exposition<br>en <span class="gradient-text">5 minutes</span></h2>
+      <p>Plusieurs points de contrôle analysés.<br>Rapport personnalisé, gratuit et confidentiel.</p>
+    </div>
+
+    <div class="prediag-container reveal">
+      <div class="prediag-progress">
+        <div class="prediag-progress-bar" id="progress-bar"></div>
+        <span class="prediag-progress-text" id="progress-text">0%</span>
+      </div>
+      <div class="prediag-form" id="prediag-form">
+        <div class="prediag-placeholder">
+          <p>Le questionnaire interactif se chargera ici.</p>
+          <button class="btn-primary" onclick="alert('Questionnaire en cours de construction')">Commencer le prédiagnostic &rarr;</button>
         </div>
       </div>
     </div>
+
   </section>
 
-  <!-- ==================== HOW IT WORKS ==================== -->
+  <!-- ==================== COMMENT ÇA MARCHE ==================== -->
   <section id="how" class="how">
     <div class="section-header reveal">
       <div class="section-tag">Comment ça marche</div>
@@ -178,7 +176,7 @@
           <li><strong>Rémunérations</strong> &mdash; heures sup, forfait jours</li>
           <li><strong>Et d'autres thématiques</strong> &mdash; audit croisé multi-thématique</li>
         </ul>
-        <div class="how-tag tag-launch">&#9733; Tarif de lancement sur l'audit ANV &mdash; 50 premiers clients</div>
+        <div class="how-tag tag-launch">&#9733; Tarif de lancement &mdash; offre limitée</div>
         <a href="#audits" class="how-cta">Voir les tarifs &rarr;</a>
       </div>
 
@@ -190,35 +188,12 @@
           <li>Veille réglementaire automatisée &mdash; plus besoin de suivre les textes vous-même</li>
           <li>Alertes en temps réel &mdash; dépassement de seuil, incidence sur vos cotisations, changement de taux</li>
           <li>Preuve documentaire continue &mdash; votre dossier de conformité se constitue au fil de l'eau</li>
-          <li>Tableau de bord conformité &mdash; vision claire de votre exposition par thématique</li>
           <li>Plan de remédiation &amp; corrections &mdash; on ne se contente pas de signaler, on corrige ensemble</li>
           <li>Export dossier complet en 1 clic &mdash; en cas de contrôle, tout est prêt</li>
           <li>Chatbot conformité URSSAF &mdash; posez vos questions, obtenez des réponses sourcées</li>
         </ul>
         <div class="how-tag tag-soon">&#9203; Bientôt disponible</div>
         <a href="#platform" class="how-cta">Être informé &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== PRÉDIAG ==================== -->
-  <section id="prediag" class="prediag">
-    <div class="section-header reveal">
-      <div class="section-tag">Prédiagnostic URSSAF gratuit</div>
-      <h2>Évaluez votre exposition<br>en <span class="gradient-text">5 minutes</span></h2>
-      <p>Plusieurs points de contrôle analysés.<br>Rapport personnalisé, gratuit et confidentiel.</p>
-    </div>
-
-    <div class="prediag-container reveal">
-      <div class="prediag-progress">
-        <div class="prediag-progress-bar" id="progress-bar"></div>
-        <span class="prediag-progress-text" id="progress-text">0%</span>
-      </div>
-      <div class="prediag-form" id="prediag-form">
-        <div class="prediag-placeholder">
-          <p>Le questionnaire interactif se chargera ici.</p>
-          <button class="btn-primary" onclick="alert('Questionnaire en cours de construction')">Commencer le prédiagnostic &rarr;</button>
-        </div>
       </div>
     </div>
   </section>
@@ -261,7 +236,7 @@
           <div class="pricing-delivery">Contactez-nous</div>
         </div>
       </div>
-      <div class="pricing-note">&#9733; Tarif de lancement réservé aux 50 premiers clients &mdash; Paiement&nbsp;: 50&nbsp;% à la commande, 50&nbsp;% à la livraison</div>
+      <div class="pricing-note">&#9733; Tarif de lancement &mdash; offre limitée &mdash; Paiement&nbsp;: 50&nbsp;% à la commande, 50&nbsp;% à la livraison</div>
     </div>
 
     <!-- Audit multi-thématique -->
@@ -305,11 +280,11 @@
       </div>
 
       <div class="audit-devis">
-        <p><strong>Chaque audit est sur-mesure.</strong> Remplissez le formulaire ci-dessous et nous vous recontactons sous 48h avec un devis adapté.</p>
+        <p><strong>Chaque audit est sur-mesure.</strong> Contactez-nous pour recevoir un devis adapté.</p>
       </div>
     </div>
 
-    <!-- Formulaire de devis -->
+    <!-- Formulaire de devis simplifié -->
     <div class="audit-block audit-form-block reveal">
       <div class="audit-block-header">
         <h3>Demander un devis</h3>
@@ -325,45 +300,17 @@
             <input type="email" name="email" required placeholder="votre@entreprise.com">
           </div>
           <div class="devis-field">
-            <label>Entreprise *</label>
-            <input type="text" name="company" required placeholder="Nom de votre entreprise">
-          </div>
-          <div class="devis-field">
-            <label>Nombre de salariés *</label>
-            <select name="employees" required>
-              <option value="">Sélectionnez...</option>
-              <option value="1-49">1 à 49</option>
-              <option value="50-249">50 à 249</option>
-              <option value="250-500">250 à 500</option>
-              <option value="500+">Plus de 500</option>
-            </select>
-          </div>
-          <div class="devis-field">
             <label>Type d'audit souhaité *</label>
             <select name="audit_type" required>
               <option value="">Sélectionnez...</option>
               <option value="anv">Audit ANV Véhicules</option>
               <option value="frais-pro">Frais professionnels</option>
               <option value="psc">Protection sociale complémentaire</option>
-              <option value="remunerations">Rémunérations & temps de travail</option>
+              <option value="remunerations">Rémunérations &amp; temps de travail</option>
               <option value="multi">Audit multi-thématique</option>
               <option value="autre">Autre / Je ne sais pas encore</option>
             </select>
           </div>
-          <div class="devis-field">
-            <label>Nombre de véhicules de fonction <span class="devis-optional">(si audit ANV)</span></label>
-            <select name="vehicles">
-              <option value="">Non concerné</option>
-              <option value="5-15">5 à 15</option>
-              <option value="16-40">16 à 40</option>
-              <option value="41-100">41 à 100</option>
-              <option value="100+">Plus de 100</option>
-            </select>
-          </div>
-        </div>
-        <div class="devis-field devis-field-full">
-          <label>Précisions ou questions</label>
-          <textarea name="message" rows="3" placeholder="Décrivez votre besoin, vos enjeux, ou posez-nous une question..."></textarea>
         </div>
         <div class="devis-submit">
           <button type="submit" class="btn-primary">Envoyer ma demande de devis &rarr;</button>
@@ -391,7 +338,7 @@
         </p>
       </div>
 
-      <!-- CHEMIN LOGIQUE — parcours de la donnée à la sérénité -->
+      <!-- CHEMIN LOGIQUE -->
       <div class="platform-path">
         <div class="path-step">
           <div class="path-num">1</div>
@@ -475,32 +422,16 @@
         </p>
       </div>
     </div>
-
   </section>
 
-  <!-- ==================== CONTACT ==================== -->
-  <section id="contact" class="contact">
-    <div class="contact-inner reveal">
-      <div class="section-tag">Contact</div>
-      <h2>Échangeons sur vos enjeux</h2>
-      <p>Prédiagnostic, audit, ou question sur la solution ACOMPIA &mdash; nous sommes là.</p>
-
-      <div class="contact-options">
-        <a href="mailto:she@acompia.com?subject=Demande%20de%20rendez-vous%20ACOMPIA" class="contact-card">
-          <div class="contact-card-icon">&#128197;</div>
-          <h3>Prendre rendez-vous</h3>
-          <p>Réservez un créneau de 30&nbsp;min</p>
-        </a>
-        <a href="mailto:she@acompia.com" class="contact-card">
-          <div class="contact-card-icon">&#9993;&#65039;</div>
-          <h3>she@acompia.com</h3>
-          <p>Envoyez-nous un email</p>
-        </a>
-        <a href="tel:+33677052175" class="contact-card">
-          <div class="contact-card-icon">&#128222;</div>
-          <h3>06 77 05 21 75</h3>
-          <p>Appelez-nous directement</p>
-        </a>
+  <!-- ==================== CONTACT (compact) ==================== -->
+  <section id="contact" class="contact-compact">
+    <div class="contact-compact-inner reveal">
+      <h2>Une question&nbsp;? Échangeons.</h2>
+      <div class="contact-compact-row">
+        <a href="mailto:she@acompia.com?subject=Demande%20de%20rendez-vous%20ACOMPIA" class="contact-chip">&#128197; Prendre rendez-vous</a>
+        <a href="mailto:she@acompia.com" class="contact-chip">&#9993;&#65039; she@acompia.com</a>
+        <a href="tel:+33677052175" class="contact-chip">&#128222; 06 77 05 21 75</a>
       </div>
     </div>
   </section>
@@ -509,7 +440,22 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo">ACOMPIA</div>
+        <div class="footer-logo">
+          <svg width="32" height="26" viewBox="0 0 56 48" fill="none" style="vertical-align:middle;margin-right:10px" class="logo-glow">
+            <path d="M14 2C6 2,2 10,2 24C2 38,6 46,14 46" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+            <line x1="16" y1="10" x2="23" y2="10" stroke="rgba(255,255,255,0.35)" stroke-width="1" stroke-linecap="round"/>
+            <line x1="19" y1="16" x2="25" y2="16" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-linecap="round"/>
+            <line x1="14" y1="22" x2="21" y2="22" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-linecap="round"/>
+            <line x1="18" y1="28" x2="24" y2="28" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"/>
+            <line x1="15" y1="34" x2="22" y2="34" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-linecap="round"/>
+            <circle cx="28" cy="24" r="3" fill="#22D3EE"/>
+            <line x1="32" y1="10" x2="40" y2="10" stroke="#22D3EE" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
+            <line x1="32" y1="16" x2="40" y2="16" stroke="#22D3EE" stroke-width="0.9" stroke-linecap="round" opacity="0.6"/>
+            <line x1="32" y1="22" x2="40" y2="22" stroke="#22D3EE" stroke-width="1.1" stroke-linecap="round"/>
+            <line x1="32" y1="28" x2="40" y2="28" stroke="#22D3EE" stroke-width="0.9" stroke-linecap="round" opacity="0.6"/>
+            <line x1="32" y1="34" x2="40" y2="34" stroke="#22D3EE" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
+            <path d="M42 2C50 2,54 10,54 24C54 38,50 46,42 46" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          </svg>ACOMPIA</div>
         <p>Le tiers de confiance de la conformité en entreprise.</p>
         <p class="footer-legal-entity">&copy; 2026 ComplyDB SAS (ACOMPIA) &mdash; Tous droits réservés</p>
       </div>
@@ -522,7 +468,6 @@
         </div>
         <div class="footer-col">
           <h4>Entreprise</h4>
-          <a href="#about">La solution</a>
           <a href="#team">L'équipe</a>
           <a href="#contact">Contact</a>
         </div>

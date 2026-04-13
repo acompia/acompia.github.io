@@ -792,10 +792,20 @@ document.addEventListener('DOMContentLoaded', () => {
     form.innerHTML = `
       <div class="prediag-placeholder">
         <div class="prediag-intro">
-          <h3>Prédiagnostic URSSAF — Cadre et limites</h3>
-          <p>Ce questionnaire vous permet d'obtenir un prédiagnostic rapide de votre exposition aux principaux risques de redressement URSSAF.</p>
-          <p>Il repose intégralement sur vos réponses déclaratives. Il ne constitue ni un audit, ni une validation de conformité. Les résultats sont indicatifs.</p>
+          <h3>Prédiagnostic URSSAF — cadre et portée</h3>
+          <p>Ce questionnaire permet d'obtenir un prédiagnostic automatisé de votre exposition à certains risques URSSAF fréquemment rencontrés en entreprise.</p>
+          <p>Il repose exclusivement sur vos réponses déclaratives. Il ne constitue ni un audit de conformité, ni une validation de vos pratiques, ni un avis juridique individualisé. Il a pour seul objet de faire ressortir des zones d'attention, des facteurs de risque probables et des points à vérifier en priorité.</p>
+          <p>Les résultats doivent donc être lus sous réserve des pièces, du paramétrage de paie, des DSN, des accords applicables et des pratiques effectives. Seule une revue approfondie permet de confirmer ou d'écarter un risque et, le cas échéant, d'en chiffrer précisément l'exposition.</p>
           <p class="q-hint">Durée estimée : 5 à 8 minutes.</p>
+
+          <details class="rgpd-toggle">
+            <summary>🔒 Protection des données personnelles</summary>
+            <div class="rgpd-content">
+              <p>Le responsable de traitement est ComplyDB SAS, éditrice d'ACOMPIA. Les données renseignées dans ce questionnaire (identité, coordonnées professionnelles, fonction, réponses au questionnaire) sont traitées afin de générer votre rapport de prédiagnostic et, le cas échéant, d'échanger avec vous sur vos besoins en matière d'audit ou de conformité. La base légale de ce traitement est l'exécution de mesures précontractuelles demandées par la personne concernée. L'envoi d'informations commerciales ou d'actualité ACOMPIA repose, lui, sur votre choix distinct en fin de questionnaire.</p>
+              <p>Les champs signalés comme obligatoires sont nécessaires à la génération du rapport. À défaut, celui-ci pourra être partiel ou ne pas pouvoir être délivré. Les données sont accessibles aux équipes habilitées de ComplyDB SAS et à ses sous-traitants techniques intervenant pour l'hébergement, le formulaire et l'envoi du rapport. Elles sont conservées pendant une durée proportionnée à la finalité du prédiagnostic, puis archivées ou supprimées selon la politique applicable.</p>
+              <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et, lorsque les conditions sont réunies, de portabilité. Vous pouvez également introduire une réclamation auprès de la CNIL. Contact : <a href="mailto:contact@acompia.com" style="color:#4338CA">contact@acompia.com</a>.</p>
+            </div>
+          </details>
         </div>
         <button class="btn-primary" id="start-prediag">Commencer le prédiagnostic →</button>
       </div>

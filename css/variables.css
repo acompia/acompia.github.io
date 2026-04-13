@@ -1,0 +1,65 @@
+/* ACOMPIA Design Tokens — Palette Indigo Electrique */
+:root {
+  /* Backgrounds */
+  --bg-dark: #0C1222;
+  --bg-dark-alt: #101830;
+  --bg-light: #F4F6FB;
+  --bg-white: #FFFFFF;
+
+  /* Surfaces */
+  --surface-dark: rgba(255,255,255,0.04);
+  --surface-dark-hover: rgba(255,255,255,0.07);
+  --surface-light: rgba(67,56,202,0.03);
+  --surface-light-hover: rgba(67,56,202,0.06);
+
+  /* Borders */
+  --border-dark: rgba(255,255,255,0.07);
+  --border-dark-accent: rgba(67,56,202,0.3);
+  --border-light: rgba(67,56,202,0.08);
+  --border-light-accent: rgba(67,56,202,0.18);
+
+  /* Text - Dark backgrounds */
+  --text-dark: #EEF0F6;
+  --text-dark-sec: rgba(238,240,246,0.55);
+  --text-dark-muted: rgba(238,240,246,0.3);
+
+  /* Text - Light backgrounds */
+  --text-light: #111836;
+  --text-light-sec: #5C6480;
+  --text-light-muted: #9BA3B8;
+
+  /* Accents */
+  --accent-indigo: #4338CA;
+  --accent-cyan: #22D3EE;
+  --accent-emerald: #10B981;
+  --accent-amber: #F59E0B;
+  --accent-red: #EF4444;
+
+  /* Gradients */
+  --gradient-main: linear-gradient(135deg, #4338CA 0%, #22D3EE 100%);
+  --gradient-tri: linear-gradient(135deg, #4338CA 0%, #10B981 50%, #22D3EE 100%);
+  --gradient-text: linear-gradient(135deg, #4338CA 0%, #059669 50%, #22D3EE 100%);
+
+  /* Glows */
+  --glow-indigo: rgba(67,56,202,0.12);
+  --glow-cyan: rgba(34,211,238,0.1);
+
+  /* Typography */
+  --font-display: 'Outfit', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  /* Spacing */
+  --section-pad: 120px 48px;
+  --section-pad-mobile: 80px 20px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-med: 0.3s ease;
+  --transition-slow: 0.4s ease;
+}

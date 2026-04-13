@@ -1,53 +1,542 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>acompia - Le tiers de confiance de la conformité en entreprise</title>
-    <link rel="icon" href="favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"IBM Plex Sans"', 'sans-serif'],
-              fraunces: ['Fraunces', 'serif'],
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      body {
-        background-color: #ededed;
-        background-image: radial-gradient(#d9d9d9 0.95px, #ededed 0.95px);
-        background-size: 19px 19px;
-      }
-    </style>
-  </head>
-  <body class="min-h-screen flex justify-center items-center font-sans">
-    <div class="text-center p-8">
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-4 mb-2">
-        <img
-          src="axompia.xxl.png"
-          alt="acompia logo"
-          class="h-16 w-auto relative top-2"
-        />
-        <h1 class="font-fraunces text-5xl sm:text-7xl md:text-[5.5rem] font-semibold text-[#1a1a1a] tracking-tight">
-          acompia
-        </h1>
-      </div>
-      <p class="text-base font-medium text-black max-w-[500px] tracking-wide">
-        Le tiers de confiance de la
-        <span class="text-[#5e4ce6]">conformité</span> en entreprise.
-      </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ACOMPIA — La conformité URSSAF, enfin maîtrisée. Prédiagnostic gratuit en 5 minutes. Solution conçue par une avocate spécialisée.">
+  <title>ACOMPIA — Conformité URSSAF maîtrisée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ==================== NAV ==================== -->
+  <nav id="nav">
+    <div class="nav-logo">
+      <span class="nav-logo-text">ACOMPIA</span>
     </div>
-  </body>
+    <div class="nav-links">
+      <a href="#about">La solution</a>
+      <a href="#prediag">Prédiagnostic</a>
+      <a href="#audits">Nos audits</a>
+      <a href="#team">Équipe</a>
+      <a href="#contact" class="nav-cta">Prendre RDV</a>
+    </div>
+    <button class="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="hero" class="hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-content reveal">
+      <h1>La conformité URSSAF,<br>enfin <span class="gradient-text">maîtrisée.</span></h1>
+
+      <p class="hero-subtitle">
+        Chaque année, <strong>l'URSSAF redresse des milliers d'entreprises</strong>.
+        La vôtre est-elle prête&nbsp;? Évaluez votre exposition en 5&nbsp;minutes
+        avec notre prédiagnostic gratuit.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#prediag" class="btn-primary">Lancer mon prédiag gratuit &rarr;</a>
+        <a href="#audits" class="btn-secondary">Découvrir nos audits</a>
+      </div>
+
+      <div class="trust-strip">
+        <div class="trust-item">
+          <div class="trust-icon">&#9878;&#65039;</div>
+          <div class="trust-text">Conçue par une avocate spécialisée (10+ ans)</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">&#127979;</div>
+          <div class="trust-text">Solution incubée au Barreau de Paris</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">&#128187;</div>
+          <div class="trust-text">Équipe de juristes &amp; développeurs dédiés</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">&#128274;</div>
+          <div class="trust-text">Données sécurisées &amp; confidentielles</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS ==================== -->
+  <section id="stats" class="stats">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-number" data-target="5.5">0</div>
+        <div class="stat-suffix">Md&euro;</div>
+        <div class="stat-label">objectif de redressement<br>fixé par l'État d'ici 2027</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-number" data-target="1.5">0</div>
+        <div class="stat-suffix">Md&euro;</div>
+        <div class="stat-label">de redressements<br>en 2025 — record historique</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-number" data-target="3">0</div>
+        <div class="stat-suffix">&agrave; 5 ans</div>
+        <div class="stat-label">de prescription<br>vérifiés lors d'un contrôle</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-suffix">min</div>
+        <div class="stat-label">pour évaluer<br>votre exposition</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT / LA SOLUTION ==================== -->
+  <section id="about" class="about">
+    <div class="about-inner reveal">
+      <div class="section-tag">La solution ACOMPIA</div>
+      <h2>Intelligence artificielle &amp; expertise juridique<br>au service de votre <span class="gradient-text">conformité</span></h2>
+      <p class="about-lead">
+        ACOMPIA combine la puissance de l'IA avec l'expertise de juristes spécialisés
+        pour transformer la complexité réglementaire URSSAF en décisions claires et actionnables.
+        Chaque analyse est vérifiable, chaque résultat est tracé.
+      </p>
+      <div class="about-points">
+        <div class="about-point">
+          <div class="about-point-icon">&#129302;</div>
+          <div>
+            <h3>IA spécialisée &amp; validée par des experts</h3>
+            <p>Notre moteur d'intelligence artificielle analyse en continu les évolutions réglementaires (BOSS, Légifrance, jurisprudence), extrait automatiquement les règles applicables et les applique à vos données. Chaque résultat est validé par nos juristes&nbsp;: <strong>l'IA accélère, l'expert garantit</strong>.</p>
+          </div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-icon">&#9878;&#65039;</div>
+          <div>
+            <h3>Fondée par une avocate spécialisée, incubée au Barreau de Paris</h3>
+            <p>10+ ans de pratique en droit social et contentieux URSSAF. Sabrina Henocque Chiche connaît les points de contrôle de l'intérieur. Solution sélectionnée par l'incubateur du Barreau de Paris (IBC 2025).</p>
+          </div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-icon">&#128268;</div>
+          <div>
+            <h3>Plugée à vos données en continu</h3>
+            <p>ACOMPIA se connecte à vos données de paie, DSN et documents RH en permanence. Le moteur de règles analyse chaque salarié, chaque véhicule, chaque prime — et constitue votre dossier de preuve automatiquement. En cas de contrôle&nbsp;: <strong>tout est prêt, exportable en un clic</strong>.</p>
+          </div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-icon">&#128172;</div>
+          <div>
+            <h3>Chatbot conformité URSSAF intégré</h3>
+            <p>Des questions sur vos pratiques&nbsp;? Notre assistant IA répond à vos interrogations de conformité URSSAF en temps réel, avec des réponses sourcées et vérifiables basées sur les textes en vigueur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOW IT WORKS ==================== -->
+  <section id="how" class="how">
+    <div class="section-header reveal">
+      <div class="section-tag">Comment ça marche</div>
+      <h2>Plusieurs manières de sécuriser<br>votre conformité</h2>
+      <p>Du diagnostic rapide à l'audit approfondi, choisissez le niveau adapté à vos enjeux.</p>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card reveal">
+        <div class="how-step">01 &mdash; GRATUIT</div>
+        <h3>Prédiagnostic URSSAF</h3>
+        <p>Plusieurs points de contrôle en 5&nbsp;minutes. Répondez au questionnaire et recevez un rapport personnalisé avec vos zones de risque et les actions prioritaires.</p>
+        <ul class="how-details">
+          <li>Frais professionnels &amp; IK</li>
+          <li>Avantages en nature</li>
+          <li>Protection sociale complémentaire</li>
+          <li>Rémunérations &amp; temps de travail</li>
+          <li>Réduction générale (RGDU)</li>
+          <li>Ruptures de contrat</li>
+          <li>Versement mobilité</li>
+        </ul>
+        <div class="how-tag tag-free">&#10003; Gratuit &bull; Confidentiel &bull; Sans engagement</div>
+        <a href="#prediag" class="how-cta">Lancer le prédiag &rarr;</a>
+      </div>
+
+      <div class="how-card reveal">
+        <div class="how-step">02 &mdash; AUDIT EXPERT</div>
+        <h3>Audit sur-mesure</h3>
+        <p>Notre équipe de juristes mène un audit approfondi de votre conformité, avec analyse documentaire, chiffrage de l'exposition financière, <strong>plan d'action concret</strong> et <strong>corrections proposées</strong>.</p>
+        <ul class="how-details">
+          <li><strong>Avantages en nature véhicules</strong> &mdash; flotte complète</li>
+          <li><strong>Frais professionnels</strong> &mdash; IK, forfaits, DFS</li>
+          <li><strong>Protection sociale</strong> &mdash; mutuelle, prévoyance, DUE</li>
+          <li><strong>Rémunérations</strong> &mdash; heures sup, forfait jours</li>
+          <li><strong>Et d'autres thématiques</strong> &mdash; audit croisé multi-thématique</li>
+        </ul>
+        <div class="how-tag tag-launch">&#9733; Tarif de lancement sur l'audit ANV &mdash; 50 premiers clients</div>
+        <a href="#audits" class="how-cta">Voir les tarifs &rarr;</a>
+      </div>
+
+      <div class="how-card reveal">
+        <div class="how-step">03 &mdash; LA SOLUTION ACOMPIA</div>
+        <h3>Monitoring continu</h3>
+        <p>La conformité en pilote automatique. ACOMPIA se connecte à vos données, surveille en permanence, et constitue votre dossier de preuve en continu. En cas de contrôle&nbsp;: <strong>tout est prêt, exportable en un clic</strong>.</p>
+        <ul class="how-details">
+          <li>Veille réglementaire automatisée &mdash; plus besoin de suivre les textes vous-même</li>
+          <li>Alertes en temps réel &mdash; dépassement de seuil, incidence sur vos cotisations, changement de taux</li>
+          <li>Preuve documentaire continue &mdash; votre dossier de conformité se constitue au fil de l'eau</li>
+          <li>Tableau de bord conformité &mdash; vision claire de votre exposition par thématique</li>
+          <li>Plan de remédiation &amp; corrections &mdash; on ne se contente pas de signaler, on corrige ensemble</li>
+          <li>Export dossier complet en 1 clic &mdash; en cas de contrôle, tout est prêt</li>
+          <li>Chatbot conformité URSSAF &mdash; posez vos questions, obtenez des réponses sourcées</li>
+        </ul>
+        <div class="how-tag tag-soon">&#9203; Bientôt disponible</div>
+        <a href="#platform" class="how-cta">Être informé &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRÉDIAG ==================== -->
+  <section id="prediag" class="prediag">
+    <div class="section-header reveal">
+      <div class="section-tag">Prédiagnostic URSSAF gratuit</div>
+      <h2>Évaluez votre exposition<br>en <span class="gradient-text">5 minutes</span></h2>
+      <p>Plusieurs points de contrôle analysés.<br>Rapport personnalisé, gratuit et confidentiel.</p>
+    </div>
+
+    <div class="prediag-container reveal">
+      <div class="prediag-progress">
+        <div class="prediag-progress-bar" id="progress-bar"></div>
+        <span class="prediag-progress-text" id="progress-text">0%</span>
+      </div>
+      <div class="prediag-form" id="prediag-form">
+        <div class="prediag-placeholder">
+          <p>Le questionnaire interactif se chargera ici.</p>
+          <button class="btn-primary" onclick="alert('Questionnaire en cours de construction')">Commencer le prédiagnostic &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== AUDITS ==================== -->
+  <section id="audits" class="audits">
+    <div class="section-header reveal">
+      <div class="section-tag">Nos audits experts</div>
+      <h2>Un audit approfondi mené par<br>des <span class="gradient-text">juristes spécialisés</span></h2>
+      <p>Analyse documentaire, chiffrage de l'exposition financière, <strong>plan d'action concret</strong> et <strong>corrections proposées</strong>.</p>
+    </div>
+
+    <!-- Audit ANV -->
+    <div class="audit-block reveal">
+      <div class="audit-block-header">
+        <h3>Audit Avantages en Nature Véhicules (ANV)</h3>
+        <div class="audit-badge">Le plus demandé</div>
+      </div>
+      <p>Audit complet de votre flotte&nbsp;: évaluation conforme post-réforme 2025, traitement social, preuve documentaire. Véhicule par véhicule, salarié par salarié. Rapport livré avec <strong>plan d'action et corrections à appliquer</strong>.</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-fleet">5-15 véhicules</div>
+          <div class="pricing-price">2&nbsp;500&nbsp;&euro; <span>HT</span></div>
+          <div class="pricing-delivery">Livraison 7 jours</div>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-fleet">16-40 véhicules</div>
+          <div class="pricing-price">4&nbsp;000&nbsp;&euro; <span>HT</span></div>
+          <div class="pricing-delivery">Livraison 10 jours</div>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-fleet">41-100 véhicules</div>
+          <div class="pricing-price">6&nbsp;000&nbsp;&euro; <span>HT</span></div>
+          <div class="pricing-delivery">Livraison 15 jours</div>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-fleet">100+ véhicules</div>
+          <div class="pricing-price">Sur devis</div>
+          <div class="pricing-delivery">Contactez-nous</div>
+        </div>
+      </div>
+      <div class="pricing-note">&#9733; Tarif de lancement réservé aux 50 premiers clients &mdash; Paiement&nbsp;: 50&nbsp;% à la commande, 50&nbsp;% à la livraison</div>
+    </div>
+
+    <!-- Audit multi-thématique -->
+    <div class="audit-block reveal">
+      <div class="audit-block-header">
+        <h3>Audit multi-thématique URSSAF</h3>
+      </div>
+      <p>Un audit croisé couvrant plusieurs axes de conformité, adapté à votre profil de risque. Chaque audit inclut un <strong>plan d'action détaillé</strong> avec les <strong>corrections concrètes à mettre en œuvre</strong>&nbsp;:</p>
+
+      <div class="themes-grid">
+        <div class="theme-card">
+          <div class="theme-icon">&#128176;</div>
+          <h4>Frais professionnels</h4>
+          <p>IK, forfaits repas, déplacements, DFS</p>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">&#128663;</div>
+          <h4>Avantages en nature</h4>
+          <p>Véhicules, NTIC, logement, nourriture</p>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">&#127973;</div>
+          <h4>Protection sociale</h4>
+          <p>Mutuelle, prévoyance, DUE, dispenses</p>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">&#128181;</div>
+          <h4>Rémunérations</h4>
+          <p>Heures sup, forfait jours, primes, DSN</p>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">&#128202;</div>
+          <h4>Réduction générale</h4>
+          <p>Calcul RGDU, seuils, situations complexes</p>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">&#128221;</div>
+          <h4>Ruptures de contrat</h4>
+          <p>Transactions, ruptures conv., indemnités</p>
+        </div>
+      </div>
+
+      <div class="audit-devis">
+        <p><strong>Chaque audit est sur-mesure.</strong> Remplissez le formulaire ci-dessous et nous vous recontactons sous 48h avec un devis adapté.</p>
+      </div>
+    </div>
+
+    <!-- Formulaire de devis -->
+    <div class="audit-block audit-form-block reveal">
+      <div class="audit-block-header">
+        <h3>Demander un devis</h3>
+      </div>
+      <form class="devis-form" id="devis-form">
+        <div class="devis-grid">
+          <div class="devis-field">
+            <label>Nom et prénom *</label>
+            <input type="text" name="name" required placeholder="Jean Dupont">
+          </div>
+          <div class="devis-field">
+            <label>Email professionnel *</label>
+            <input type="email" name="email" required placeholder="votre@entreprise.com">
+          </div>
+          <div class="devis-field">
+            <label>Entreprise *</label>
+            <input type="text" name="company" required placeholder="Nom de votre entreprise">
+          </div>
+          <div class="devis-field">
+            <label>Nombre de salariés *</label>
+            <select name="employees" required>
+              <option value="">Sélectionnez...</option>
+              <option value="1-49">1 à 49</option>
+              <option value="50-249">50 à 249</option>
+              <option value="250-500">250 à 500</option>
+              <option value="500+">Plus de 500</option>
+            </select>
+          </div>
+          <div class="devis-field">
+            <label>Type d'audit souhaité *</label>
+            <select name="audit_type" required>
+              <option value="">Sélectionnez...</option>
+              <option value="anv">Audit ANV Véhicules</option>
+              <option value="frais-pro">Frais professionnels</option>
+              <option value="psc">Protection sociale complémentaire</option>
+              <option value="remunerations">Rémunérations & temps de travail</option>
+              <option value="multi">Audit multi-thématique</option>
+              <option value="autre">Autre / Je ne sais pas encore</option>
+            </select>
+          </div>
+          <div class="devis-field">
+            <label>Nombre de véhicules de fonction <span class="devis-optional">(si audit ANV)</span></label>
+            <select name="vehicles">
+              <option value="">Non concerné</option>
+              <option value="5-15">5 à 15</option>
+              <option value="16-40">16 à 40</option>
+              <option value="41-100">41 à 100</option>
+              <option value="100+">Plus de 100</option>
+            </select>
+          </div>
+        </div>
+        <div class="devis-field devis-field-full">
+          <label>Précisions ou questions</label>
+          <textarea name="message" rows="3" placeholder="Décrivez votre besoin, vos enjeux, ou posez-nous une question..."></textarea>
+        </div>
+        <div class="devis-submit">
+          <button type="submit" class="btn-primary">Envoyer ma demande de devis &rarr;</button>
+          <p class="devis-note">Réponse sous 48h &bull; Sans engagement</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== SOLUTION TEASER ==================== -->
+  <section id="platform" class="platform">
+    <div class="platform-inner reveal">
+      <div class="section-tag">La solution ACOMPIA</div>
+      <h2>Votre conformité URSSAF,<br><span class="gradient-text">en continu.</span></h2>
+
+      <div class="platform-story">
+        <p class="platform-fear">
+          Chaque année, des entreprises font face à des redressements massifs
+          pour des erreurs dont elles n'avaient même pas conscience.
+        </p>
+        <p class="platform-fear-sub">Certaines n'y survivent pas.</p>
+        <p class="platform-relief">Et si vous n'aviez plus à y penser&nbsp;?</p>
+        <p class="platform-promise">
+          ACOMPIA s'en charge pour vous.
+        </p>
+      </div>
+
+      <!-- CHEMIN LOGIQUE — parcours de la donnée à la sérénité -->
+      <div class="platform-path">
+        <div class="path-step">
+          <div class="path-num">1</div>
+          <div class="path-icon">&#128268;</div>
+          <h4>Connexion</h4>
+          <p>ACOMPIA se connecte à vos données de paie, DSN et documents RH</p>
+        </div>
+        <div class="path-arrow"><span></span><span></span><span></span></div>
+        <div class="path-step">
+          <div class="path-num">2</div>
+          <div class="path-icon">&#129302;</div>
+          <h4>Analyse IA</h4>
+          <p>Notre moteur analyse vos données en continu et détecte les écarts</p>
+        </div>
+        <div class="path-arrow"><span></span><span></span><span></span></div>
+        <div class="path-step">
+          <div class="path-num">3</div>
+          <div class="path-icon">&#9888;&#65039;</div>
+          <h4>Alertes</h4>
+          <p>Dépassement de seuil, changement de taux, incidence sur vos cotisations</p>
+        </div>
+        <div class="path-arrow"><span></span><span></span><span></span></div>
+        <div class="path-step">
+          <div class="path-num">4</div>
+          <div class="path-icon">&#128736;&#65039;</div>
+          <h4>Correction</h4>
+          <p>Plan de remédiation priorisé — on ne signale pas seulement, on corrige ensemble</p>
+        </div>
+        <div class="path-arrow"><span></span><span></span><span></span></div>
+        <div class="path-step">
+          <div class="path-num">5</div>
+          <div class="path-icon">&#128203;</div>
+          <h4>Preuve</h4>
+          <p>Votre dossier de conformité se constitue automatiquement, au fil de l'eau</p>
+        </div>
+        <div class="path-arrow"><span></span><span></span><span></span></div>
+        <div class="path-step path-step-final">
+          <div class="path-num">&#10003;</div>
+          <div class="path-icon">&#128228;</div>
+          <h4>Sérénité</h4>
+          <p>En cas de contrôle : tout est prêt, exportable en un clic</p>
+        </div>
+      </div>
+
+      <div class="platform-extras">
+        <div class="platform-extra">&#128200; Tableau de bord de votre exposition</div>
+        <div class="platform-extra">&#128172; Chatbot conformité URSSAF</div>
+        <div class="platform-extra">&#9878;&#65039; Chaque résultat validé par des juristes experts</div>
+      </div>
+
+      <form class="platform-form" id="notify-form">
+        <input type="email" placeholder="Votre email professionnel" required>
+        <button type="submit" class="btn-primary">Être informé du lancement &rarr;</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== ÉQUIPE ==================== -->
+  <section id="team" class="team">
+    <div class="section-header reveal">
+      <div class="section-tag">L'équipe</div>
+      <h2>Une avocate spécialisée et ses équipes<br>de <span class="gradient-text">juristes et développeurs dédiés</span></h2>
+    </div>
+
+    <div class="team-founder reveal">
+      <img src="assets/images/sabrina.jpg" alt="Sabrina Henocque Chiche — Fondatrice d'ACOMPIA" class="team-photo" />
+      <div class="team-photo-placeholder" style="display:none">SHC</div>
+      <div class="team-info">
+        <h3>Sabrina Henocque Chiche</h3>
+        <div class="team-role">Fondatrice &amp; CEO</div>
+        <p>
+          Avocate en droit social depuis plus de 10&nbsp;ans. Spécialiste des contrôles URSSAF
+          et du contentieux de la sécurité sociale, elle a accompagné des entreprises de toutes tailles
+          face à l'URSSAF — et connaît précisément les mécanismes qui déclenchent les redressements.
+        </p>
+        <p class="team-quote">
+          &laquo;&nbsp;L'URSSAF automatise et industrialise ses contrôles. Les entreprises, elles,
+          découvrent encore leurs failles le jour du contrôle. J'ai créé ACOMPIA pour rétablir
+          l'équilibre&nbsp;: si l'URSSAF automatise l'attaque, les entreprises doivent automatiser
+          leur conformité.&nbsp;&raquo;
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="contact">
+    <div class="contact-inner reveal">
+      <div class="section-tag">Contact</div>
+      <h2>Échangeons sur vos enjeux</h2>
+      <p>Prédiagnostic, audit, ou question sur la solution ACOMPIA &mdash; nous sommes là.</p>
+
+      <div class="contact-options">
+        <a href="mailto:she@acompia.com?subject=Demande%20de%20rendez-vous%20ACOMPIA" class="contact-card">
+          <div class="contact-card-icon">&#128197;</div>
+          <h3>Prendre rendez-vous</h3>
+          <p>Réservez un créneau de 30&nbsp;min</p>
+        </a>
+        <a href="mailto:she@acompia.com" class="contact-card">
+          <div class="contact-card-icon">&#9993;&#65039;</div>
+          <h3>she@acompia.com</h3>
+          <p>Envoyez-nous un email</p>
+        </a>
+        <a href="tel:+33677052175" class="contact-card">
+          <div class="contact-card-icon">&#128222;</div>
+          <h3>06 77 05 21 75</h3>
+          <p>Appelez-nous directement</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">ACOMPIA</div>
+        <p>Le tiers de confiance de la conformité en entreprise.</p>
+        <p class="footer-legal-entity">&copy; 2026 ComplyDB SAS (ACOMPIA) &mdash; Tous droits réservés</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Solution</h4>
+          <a href="#prediag">Prédiagnostic gratuit</a>
+          <a href="#audits">Nos audits</a>
+          <a href="#platform">La solution ACOMPIA</a>
+        </div>
+        <div class="footer-col">
+          <h4>Entreprise</h4>
+          <a href="#about">La solution</a>
+          <a href="#team">L'équipe</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Légal</h4>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/scoring.js"></script>
+  <script src="js/questionnaire.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

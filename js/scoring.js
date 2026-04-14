@@ -349,7 +349,7 @@ function generateReportHTML(scoring) {
 
       <div class="report-cta">
         <p>Pour un rapport complet avec chiffrage de votre exposition et plan d'action détaillé :</p>
-        <a href="#contact" class="btn-primary">Prendre rendez-vous avec notre équipe →</a>
+        <a href="https://calendly.com/she-valnoa-avocat/rdv-30-min" target="_blank" class="btn-primary">Prendre rendez-vous avec notre équipe →</a>
       </div>
     </div>
   `;

@@ -733,27 +733,31 @@ class Questionnaire {
       const scoring = computeScoring(this.answers);
       const reportHTML = generateReportHTML(scoring);
 
-      // Send notification email to Sabrina via mailto (fallback)
+      // Build scoring summary for Notion
       const reportSummary = scoring.themes
         .filter(t => t.level !== 'NA')
         .map(t => `${t.icon} ${t.name}: ${t.level}`)
-        .join('\n');
+        .join(' | ');
 
-      const mailBody = encodeURIComponent(
-        `Nouveau prédiagnostic ACOMPIA\n\n` +
-        `Nom : ${contact.name}\n` +
-        `Email : ${contact.email}\n` +
-        `Fonction : ${contact.function || 'Non précisée'}\n` +
-        `Opt-in : ${contact.optin ? 'Oui' : 'Non'}\n\n` +
-        `--- RÉSULTATS ---\n` +
-        `Fiabilité : ${scoring.fiabilite}\n\n` +
-        `${reportSummary}\n\n` +
-        `--- RÉPONSES DÉTAILLÉES ---\n` +
-        JSON.stringify(this.answers, null, 2)
-      );
-
-      // Open hidden iframe to trigger mailto (silent)
-      const mailtoLink = `mailto:she@acompia.com?subject=${encodeURIComponent('Nouveau prédiagnostic — ' + contact.name)}&body=${mailBody}`;
+      // Send to Notion via Cloudflare Worker
+      const WORKER_URL = 'https://acompia-worker.acompia.workers.dev';
+      fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'prediag',
+          data: {
+            name: contact.name,
+            email: contact.email,
+            function: contact.function || '',
+            optin: contact.optin,
+            scoring: `Fiabilité: ${scoring.fiabilite} | ${reportSummary}`
+          }
+        })
+      })
+      .then(r => r.json())
+      .then(res => console.log('Notion sync:', res.success ? '✓' : 'erreur', res))
+      .catch(err => console.warn('Notion sync échoué (worker non déployé?):', err.message));
 
       // Store data in localStorage as backup
       const allPrediags = JSON.parse(localStorage.getItem('acompia_prediags') || '[]');
@@ -768,7 +772,6 @@ class Questionnaire {
       });
       localStorage.setItem('acompia_prediags', JSON.stringify(allPrediags));
       console.log('Prédiag sauvegardé dans localStorage. Total:', allPrediags.length);
-      console.log('Lien mailto:', mailtoLink);
 
       this.container.innerHTML = `
         <div class="q-card q-card-success">

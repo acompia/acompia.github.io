@@ -115,21 +115,24 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('acompia_devis', JSON.stringify(allDevis));
       console.log('Devis sauvegardé. Total:', allDevis.length);
 
-      // Trigger mailto notification
-      const devisBody = encodeURIComponent(
-        `Nouvelle demande de devis ACOMPIA\n\n` +
-        `Nom : ${data.name}\nEmail : ${data.email}\nEntreprise : ${data.company}\n` +
-        `Salariés : ${data.employees}\nType d'audit : ${data.audit_type}\n` +
-        `Véhicules : ${data.vehicles || 'Non concerné'}\n\n` +
-        `Message :\n${data.message || 'Aucun'}`
-      );
-      const devisMailto = `mailto:she@acompia.com?subject=${encodeURIComponent('Demande de devis — ' + data.company)}&body=${devisBody}`;
-      // Open mailto silently
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.src = devisMailto;
-      document.body.appendChild(iframe);
-      setTimeout(() => iframe.remove(), 2000);
+      // Send to Notion via Cloudflare Worker
+      const WORKER_URL = 'https://acompia-worker.acompia.workers.dev';
+      fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'devis',
+          data: {
+            name: data.name,
+            email: data.email,
+            audit_type: data.audit_type || '',
+            message: `Entreprise: ${data.company} | Salariés: ${data.employees} | Véhicules: ${data.vehicles || 'N/A'} | ${data.message || ''}`
+          }
+        })
+      })
+      .then(r => r.json())
+      .then(res => console.log('Notion devis sync:', res.success ? '✓' : 'erreur', res))
+      .catch(err => console.warn('Notion sync échoué:', err.message));
 
       devisForm.parentElement.innerHTML = `
         <div class="devis-success">
@@ -152,6 +155,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const allNotifs = JSON.parse(localStorage.getItem('acompia_notify') || '[]');
       allNotifs.push({ date: new Date().toISOString(), email });
       localStorage.setItem('acompia_notify', JSON.stringify(allNotifs));
+
+      // Send to Notion via Cloudflare Worker
+      const WORKER_URL = 'https://acompia-worker.acompia.workers.dev';
+      fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'newsletter',
+          data: { email }
+        })
+      })
+      .then(r => r.json())
+      .then(res => console.log('Notion newsletter sync:', res.success ? '✓' : 'erreur', res))
+      .catch(err => console.warn('Notion sync échoué:', err.message));
 
       // Replace form with confirmation
       notifyForm.innerHTML = `

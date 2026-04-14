@@ -740,7 +740,7 @@ class Questionnaire {
         .join(' | ');
 
       // Send to Notion via Cloudflare Worker
-      const WORKER_URL = 'https://acompia-worker.acompia.workers.dev';
+      const WORKER_URL = 'https://acompia-worker.she-aa1.workers.dev';
       fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

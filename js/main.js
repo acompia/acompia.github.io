@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('Devis sauvegardé. Total:', allDevis.length);
 
       // Send to Notion via Cloudflare Worker
-      const WORKER_URL = 'https://acompia-worker.acompia.workers.dev';
+      const WORKER_URL = 'https://acompia-worker.she-aa1.workers.dev';
       fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('acompia_notify', JSON.stringify(allNotifs));
 
       // Send to Notion via Cloudflare Worker
-      const WORKER_URL = 'https://acompia-worker.acompia.workers.dev';
+      const WORKER_URL = 'https://acompia-worker.she-aa1.workers.dev';
       fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
